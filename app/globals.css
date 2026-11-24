@@ -1,26 +1,177 @@
 @import "tailwindcss";
 
+/* =========================================
+   MODO CLARO
+========================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+
+  /* MARCA - FUNDACIÓN HARENA */
+  --color-principal: #f47b00;
+  --color-principal-hover: #d96800;
+  --color-principal-activo: #b85400;
+  --color-secundario: #292929;
+  --color-acento: #ffb000;
+
+  /* FONDOS */
+  --color-fondo: #fffaf3;
+  --color-superficie: #ffffff;
+  --color-superficie-secundaria: #fff3e2;
+  --color-superficie-terciaria: #fce5c5;
+  --color-superficie-elevada: #ffffff;
+
+  /* TEXTOS */
+  --color-texto: #292929;
+  --color-texto-secundario: #49433d;
+  --color-texto-terciario: #746b62;
+  --color-texto-invertido: #ffffff;
+  --color-texto-desactivado: #a69b90;
+
+  /* BORDES */
+  --color-borde: #e9dccb;
+  --color-borde-suave: #f5ebdd;
+  --color-borde-fuerte: #d5bfa5;
+
+  /* ESTADOS */
+  --color-exito: #237a45;
+  --color-exito-fondo: #e1f2e6;
+
+  --color-advertencia: #985000;
+  --color-advertencia-fondo: #fff0cc;
+
+  --color-error: #b42318;
+  --color-error-fondo: #fce5e2;
+
+  --color-informacion: #17658a;
+  --color-informacion-fondo: #e1f1f8;
+
+  /* INTERACTIVOS */
+  --color-enlace: #b85400;
+  --color-enlace-hover: #8f4000;
+  --color-seleccion: #ffe0ae;
+  --color-anillo-foco: #d96800;
+
+  /* GRÁFICAS */
+  --color-grafica-uno: #f47b00;
+  --color-grafica-dos: #292929;
+  --color-grafica-tres: #237a45;
+  --color-grafica-cuatro: #ffb000;
+  --color-grafica-cinco: #b42318;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* =========================================
+   MODO OSCURO
+========================================= */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: dark;
+
+    /* MARCA */
+    --color-principal: #ff9a35;
+    --color-principal-hover: #ffb66b;
+    --color-principal-activo: #f47b00;
+    --color-secundario: #e8e0d6;
+    --color-acento: #ffc247;
+
+    /* FONDOS */
+    --color-fondo: #1c1916;
+    --color-superficie: #29231e;
+    --color-superficie-secundaria: #362d25;
+    --color-superficie-terciaria: #493a2e;
+    --color-superficie-elevada: #302820;
+
+    /* TEXTOS */
+    --color-texto: #fff8ef;
+    --color-texto-secundario: #e5d8c9;
+    --color-texto-terciario: #bcaf9f;
+    --color-texto-invertido: #292019;
+    --color-texto-desactivado: #8e8174;
+
+    /* BORDES */
+    --color-borde: #554638;
+    --color-borde-suave: #40352b;
+    --color-borde-fuerte: #755d47;
+
+    /* ESTADOS */
+    --color-exito: #70c98b;
+    --color-exito-fondo: #193d28;
+
+    --color-advertencia: #ffc247;
+    --color-advertencia-fondo: #594019;
+
+    --color-error: #ff8176;
+    --color-error-fondo: #572522;
+
+    --color-informacion: #73c6e8;
+    --color-informacion-fondo: #193d50;
+
+    /* INTERACTIVOS */
+    --color-enlace: #ffad5c;
+    --color-enlace-hover: #ffc78f;
+    --color-seleccion: #70400f;
+    --color-anillo-foco: #ff9a35;
+
+    /* GRÁFICAS */
+    --color-grafica-uno: #ff9a35;
+    --color-grafica-dos: #e8e0d6;
+    --color-grafica-tres: #70c98b;
+    --color-grafica-cuatro: #ffc247;
+    --color-grafica-cinco: #ff8176;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* =========================================
+   INTEGRACIÓN CON TAILWIND CSS 4
+========================================= */
+
+@theme inline {
+  /* MARCA */
+  --color-principal: var(--color-principal);
+  --color-principal-hover: var(--color-principal-hover);
+  --color-principal-activo: var(--color-principal-activo);
+  --color-secundario: var(--color-secundario);
+  --color-acento: var(--color-acento);
+
+  /* FONDOS */
+  --color-fondo: var(--color-fondo);
+  --color-superficie: var(--color-superficie);
+  --color-superficie-secundaria: var(--color-superficie-secundaria);
+  --color-superficie-terciaria: var(--color-superficie-terciaria);
+  --color-superficie-elevada: var(--color-superficie-elevada);
+
+  /* TEXTOS */
+  --color-texto: var(--color-texto);
+  --color-texto-secundario: var(--color-texto-secundario);
+  --color-texto-terciario: var(--color-texto-terciario);
+  --color-texto-invertido: var(--color-texto-invertido);
+  --color-texto-desactivado: var(--color-texto-desactivado);
+
+  /* BORDES */
+  --color-borde: var(--color-borde);
+  --color-borde-suave: var(--color-borde-suave);
+  --color-borde-fuerte: var(--color-borde-fuerte);
+
+  /* ESTADOS */
+  --color-exito: var(--color-exito);
+  --color-exito-fondo: var(--color-exito-fondo);
+  --color-advertencia: var(--color-advertencia);
+  --color-advertencia-fondo: var(--color-advertencia-fondo);
+  --color-error: var(--color-error);
+  --color-error-fondo: var(--color-error-fondo);
+  --color-informacion: var(--color-informacion);
+  --color-informacion-fondo: var(--color-informacion-fondo);
+
+  /* INTERACTIVOS */
+  --color-enlace: var(--color-enlace);
+  --color-enlace-hover: var(--color-enlace-hover);
+  --color-seleccion: var(--color-seleccion);
+  --color-anillo-foco: var(--color-anillo-foco);
+
+  /* GRÁFICAS */
+  --color-grafica-uno: var(--color-grafica-uno);
+  --color-grafica-dos: var(--color-grafica-dos);
+  --color-grafica-tres: var(--color-grafica-tres);
+  --color-grafica-cuatro: var(--color-grafica-cuatro);
+  --color-grafica-cinco: var(--color-grafica-cinco);
 }
